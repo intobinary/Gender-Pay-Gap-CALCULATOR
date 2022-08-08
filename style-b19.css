@@ -19,11 +19,16 @@ html, body {
 	*/
 }
 
+html,
+.nav,
+.about {
+	height: 100%;
+}
+
 .about { position: relative; z-index: 10; }
 .nav { position: relative; z-index: 20; }
 
 html {
-	min-height: 100vh;
 	display: flex;
 	align-items: center;
 }
@@ -69,7 +74,6 @@ body {
 }
 .nav {
 	position: fixed; top: 0; left: 0;
-	width: 10%; height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
@@ -89,8 +93,7 @@ body {
 }
 
 .about {
-	position: absolute; top: 0; left: 10%;
-	width: 90%; min-height: 100vh;
+	position: absolute; top: 0; left: -100%;
 	padding: 1em;
 }
 .about h5 { font-size: 1.25em; }
@@ -101,8 +104,7 @@ body {
 }
 
 .content {
-	position: relative; left: 10%;
-	width: 90%;
+	position: relative;
 	padding: 1em;
 }
 .header {
@@ -111,8 +113,6 @@ body {
 .nav-button,
 .nav-close { cursor: pointer; }
 
-.about { left: -100%; }
-.about.is-active { left: 10%; }
 
 .nav-close { top: -100%; }
 .nav-button:nth-child(1).is-active ~ .nav-close { top: 0; }
@@ -124,6 +124,16 @@ body {
 	.header { font-size: 2em; }
 	.footer { font-size: 1em; }
 	
+	.about,
+	.content {
+		width: 90%;
+	}
+	.content { left: 10%; }
+	.nav {
+		width: 10%;
+	}
+	.about.is-active { left: 10%; }
+	
 	.nav-button {
 		padding-right: .5em;
 	}
@@ -132,11 +142,21 @@ body {
 	.header { font-size: 3em; }
 	.footer,
 	.nav-button { font-size: 1.5em; }
+
+	.about,
+	.content {
+		width: 95%;
+	}
+	.content { left: 5%; }
+	.nav {
+		width: 5%;
+	}
+	.about.is-active { left: 5%; }
 	
 	.nav-button {
 		padding-top: .5em;
 		padding-bottom: .5em;
 		
-		padding-right: 1em;
+		padding-right: .25em;
 	}
 }
