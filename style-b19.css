@@ -78,7 +78,7 @@ body {
 	margin: .5em 0;
 	text-align: center;
 	
-	writing-mode: vertical-lr;
+	writing-mode: vertical-rl;
 	text-orientation: mixed;
 }
 .nav-close {
@@ -118,3 +118,25 @@ body {
 .nav-button:nth-child(1).is-active ~ .nav-close { top: 0; }
 .nav-button:nth-child(2).is-active ~ .nav-close { top: 33.333%; }
 .nav-button:nth-child(3).is-active ~ .nav-close { top: 66.666%; }
+
+
+@media screen and (max-width: 50em) {
+	.header { font-size: 2em; }
+	.footer { font-size: 1em; }
+	
+	.nav-button {
+		padding-right: .5em;
+	}
+}
+@media screen and (min-width: 50em) {
+	.header { font-size: 3em; }
+	.footer,
+	.nav-button { font-size: 1.5em; }
+	
+	.nav-button {
+		padding-top: .5em;
+		padding-bottom: .5em;
+		
+		padding-right: 1em;
+	}
+}
