@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>Gender Pay Gap CALCULATOR</title>
+
+<!--
+		<link rel="stylesheet" href="reset.css">
+		-->
+		<link rel="stylesheet" href="styles.min.css">
+
+		<link rel="stylesheet" href="style-b19.css">
+	</head>
+	
+	<body>		
+		<nav class="nav">
+			<span for="about1" class="nav-button">Introduction</span>
+			<span for="about2" class="nav-button">Explaining the Gap</span>
+			<span for="about3" class="nav-button">What can we do?</span>
+			
+			<span class="nav-close">&nbsp;</span>
+		</nav>
+		
+		<div id="about1" class="about">
+			<h5>The Motivation</h5>
+			
+			<p>This tool was initially inspired by the desire to find a means to empower women. As we continued to discuss issues faced by women worldwide, the gender pay gap arose as a topic that is often mentioned but rarely taken action upon. The complacency reinforces the discrimination women often face in the workforce, and we decided to take action.</p>
+
+			<p>This website aims to educate and incite action for change in women and men alike by _____<!--depicting the gender wage gap in a series of data visualizations--> and offering action items. As a group of women pursuing primarily male-dominated professional fields, our narrative resonates with women worldwide and we hope that the awareness can drive impact and inspire change for the better. After all, the future is female.</p>
+
+			<h5>Resources</h5>
+			
+			<p>The data used in our project comes from The World Economic Forum, specifically the Labor Force Statistics from the Current Population Survey of 2016. Specific earnings numbers were based on the reported Median Weekly Earnings of Men and Women.</p>
+
+			<p>Made by <a href="https://intobinary.org">Into Binary</a>.</p>
+			<p>Open Source Visualizations from Code For Change.</p>
+	</div>
+		
+		<div id="about2" class="about">
+			<h5>1) Glass Ceiling</h5>
+			<p>Women have more restricted upward mobility than men and are less likely to be promoted up the corporate ladder.</p>
+			
+			<h5>2) Double Bind</h5>
+			<p>Assertive, authoritative, dominant behaviors that people associate with leadership are frequently deemed less attractive in women.</p>
+			
+			<h5>3) Education Inequality</h5>
+			<p>Women in STEM fields tend to face more obstacles and challenges than their male counterparts in the workforce.</p>
+			
+			<h5>4) Second Shift</h5>
+			<p>Household work is still mostly assumed to be the responsibility of females, so women who work in the formal labor market are expected to perform care at home as a "second shift".</p>
+			
+			<h5>5) Gender Stereotypes</h5>
+			<p>Males are often perceived to be the breadwinner of the family, so the man's often takes precedence over a woman's.</p>
+			
+			<h5>6) Workplace Harassment</h5>
+			<p>Women often face harassment - ranging from derogatory comments to threats of assault - in the workplace, and it is hard for them to address these issues, especially if the perpetrator is their superior.</p>
+		</div>
+
+		<div id="about3" class="about">
+			<h5>1) Get Trained Through Experience</h5>
+			<p>Request for a variety of work assignments to increase knowledge and skills.</p>
+
+			<h5>2) Gain Access to Power</h5>
+			<p>Identify the most influential people in the firm and build a network of contacts with them to get involved in high-profile projects and learn how things work within the firm.</p>
+
+			<h5>3) Make Achievements Visible</h5>
+			<p>Ensure that your manager is aware of your accomplishments, and don't be afraid to seek or accept credit for work done. Ask to be considered for a promotion if you feel like you deserve it.</p>
+			
+			<h5>4) Get Formal Training</h5>
+			<p>Proactively develop new skills through courses and workshops.</p>
+			
+			<h5>5) Plan Career</h5>
+			<p>Develop a career plan for the next few years.</p>
+			
+			<h5>6) Seek Advice When Needed</h5>
+			<p>Seek advice from your support system and superiors on how to improve your future work prospects.</p>
+
+			<h5>7) Scan For Opportunity Outside The Company</h5>
+			<p>Stay informed on job prospects outside of your firm, and know your market value.</p>
+
+			<h5>8) Scan For Opportunity Inside The Company</h5>
+			<p>Review job postings at your firm to see what opportunities and promotions are available.</p>
+			
+			<h5>9) Join a Networking Circle</h5>
+			<p>B19's recommended circle: <a href="">Lean In</a>.</p>
+			<h5></h5>
+			<p></p>
+		</div>
+		
+		<section class="content">
+			<header class="header">
+				<label for="test1">GENDER PAY GAP</label>
+			</header>
+		
+			<main>
+				<section class="section section--homepage section--active">
+					<div class="section__body u-vertical-and-horizontal-centering u-background-white">
+						<button id="homepage-button" class="button button--red">
+							<span class="button__text">Calculator</span>
+							<img class="button__icon" alt="" src="images/icons/arrow-thin.svg">
+						</button>
+					</div>
+				</section>
+				
+				<section class="section section__form--country">
+					<div class="back">
+						<a id="country-form-back" class="back__link">
+							<img src="images/icons/back.svg" alt="Back" class="back__arrow">Back
+						</a>
+					</div>
+					<div class="section__body form">
+						<div class="section--form__wrapper section--form__wrapper--small-viewport">
+							<h2 class="form__subtitle">Tell us about yourself</h2>
+							<p class="form__paragraph">
+								<span class="form__line">Where are you from?</span>
+								<span class="form__field">
+									<span class="u-suffix-space">
+										<select id="field-country">
+											<option selected="selected" disabled="disabled">Your country</option>
+										</select>
+									</span>
+								</span>
+							</p>
+						</div>
+						<div class="section--form__wrapper form__button">
+							<button id="country-form-button" class="button button--red">
+								<span class="button__text">Next</span>
+								<img class="button__icon" alt="" src="images/icons/arrow.svg">
+							</button>
+						</div>
+					</div>
+					<div class="overlay"></div>
+				</section>
+				<section class="section section__form--gender">
+					<div class="back">
+						<a id="gender-form-back" class="back__link">
+							<img src="images/icons/back.svg" alt="Back" class="back__arrow">Back
+						</a>
+					</div>
+					<div class="section__body form">
+						<div class="section--form__wrapper section--form__wrapper--small-viewport">
+							<h2 class="form__subtitle">Tell us about yourself</h2>
+							<p class="form__paragraph">
+								<span class="form__line">What is your gender?</span>
+								<span class="form__field">
+									<input type="radio" name="gender-radio" id="gender-female" value="female" checked="checked">
+									<label class="field--radio" for="gender-female">Female</label>
+									<input type="radio" name="gender-radio" id="gender-male" value="male">
+									<label class="field--radio" for="gender-male">Male</label>
+								</span>
+							</p>
+						</div>
+						<div class="section--form__wrapper form__button">
+							<button id="gender-form-button" class="button button--red">
+								<span class="button__text">Next</span>
+								<!--
+			  -->
+								<img class="button__icon" alt="" src="images/icons/arrow.svg">
+							</button>
+						</div>
+					</div>
+					<div class="overlay"></div>
+				</section>
+				<section class="section section__form--salary">
+					<div class="back">
+						<a id="salary-form-back" class="back__link">
+							<img src="images/icons/back.svg" alt="Back" class="back__arrow">Back
+						</a>
+					</div>
+					<div class="section__body form">
+						<div class="section--form__wrapper section--form__wrapper--small-viewport">
+							<h2 class="form__subtitle">Tell us about yourself</h2>
+							<p class="form__paragraph">
+								<span class="form__line">How much do you make per month?</span>
+								<span class="form__field">
+									<input id="field-salary" type="number" value="" placeholder="e.g. 1,000" data-subline="Enter your monthly salary">
+									<span class="u-suffix-space">
+										<select id="field-currency">
+											<option selected="selected" disabled="disabled">Currency</option>
+										</select>
+									</span>
+								</span>
+							</p>
+						</div>
+						<div class="section--form__wrapper form__button">
+							<button id="salary-form-button" class="button button--red">
+								<span class="button__text">Get result</span>
+								<img class="button__icon" alt="" src="images/icons/arrow.svg">
+							</button>
+						</div>
+					</div>
+					<div class="overlay"></div>
+				</section>
+				<section class="section section__visualizations--local layout">
+					<div class="back">
+						<a id="local-visualization-back" class="back__link">
+							<img src="images/icons/back.svg" alt="Back" class="back__arrow">Back
+						</a>
+					</div>
+					<div class="section__body">
+						<div class="section--visualizations__wrapper section--form__wrapper section--form__wrapper--small-viewport">
+							<h2 class="gap__narrative">
+								<span class="gap__you">
+									As a <span class="gap__man-woman"></span>
+									you make <span class="gap__amount"></span>
+									<span class="gap__currency"></span>
+								</span>
+								<span class="gap__them">
+									If you were a <span class="gap__man-woman-other"></span>
+									you'd make <span class="gap__amount-other"></span>
+									<span class="gap__currency-other"></span>
+									<span class="gap__more-less-other"></span>
+									per month
+								</span>
+							</h2>
+							<div class="gap__bars-vertical">
+								<div class="gap__bars">
+									<div class="gap__bar gap__bar--you">
+										<span class="gap__bar-key">
+											<img class="gap__icon--woman" src="images/icons/woman.svg" alt="Woman symbol">
+											<img class="gap__icon--man" src="images/icons/man.svg" alt="Man symbol">
+											<span class="gap__bar-text">Your salary</span>
+										</span>
+										<span class="gap__bar-salary">
+											<span class="gap__amount"></span>
+											<span class="gap__currency"></span>
+										</span>
+									</div>
+								</div>
+								<div class="gap__bars">
+									<div class="gap__bar gap__bar--them">
+										<span class="gap__bar-key">
+											<img class="gap__icon--woman" src="images/icons/woman.svg" alt="Woman symbol">
+											<img class="gap__icon--man" src="images/icons/man.svg" alt="Man symbol">
+											<span class="gap__bar-text">
+												<span class="gap__gender-other"></span>
+												salary estimate
+											</span>
+										</span>
+										<span class="gap__bar-salary">
+											<span class="gap__bar-amount"></span>
+											<span class="gap__currency"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="gap__bottom-text">
+								<p class="gap__gender-split">
+									In <span class="gap__country"></span>
+									a man earns on average 
+									<strong>
+										<span class="gap__percent"></span>
+										% <span class="gap__more-less"></span>
+									</strong>
+									than a woman.
+								</p>
+								<!--
+								<ul class="gap__social">
+									<li class="social-media__button">
+										<a id="twitter-button-inline-alt" class="social-media__link" href="#0">
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 16.7 13.57">
+												<title>social_tw</title>
+												<path class="cls-1" d="M16.7,1.61a6.84,6.84,0,0,1-2,.54A3.44,3.44,0,0,0,16.24.25a6.83,6.83,0,0,1-2.17.83A3.43,3.43,0,0,0,8.23,4.21,9.73,9.73,0,0,1,1.16.63,3.43,3.43,0,0,0,2.22,5.2,3.41,3.41,0,0,1,.67,4.78a3.43,3.43,0,0,0,2.75,3.4,3.48,3.48,0,0,1-1.55.06,3.42,3.42,0,0,0,3.2,2.38A6.91,6.91,0,0,1,0,12a9.7,9.7,0,0,0,5.25,1.54A9.69,9.69,0,0,0,15,3.38,7,7,0,0,0,16.7,1.61Z"/>
+											</svg>
+											<span class="social-media__text">Twitter</span>
+										</a>
+									</li>
+									<li class="social-media__button">
+										<a id="facebook-button-inline-alt" class="social-media__link" href="#0">
+
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 10.05 21.53">
+												<title>social_fb</title>
+												<path d="M6.68,7.05V5.2c0-1,.09-1.49,1.48-1.49H10V0h-3C3.48,0,2.23,1.8,2.23,4.83V7.05H0v3.71H2.23V21.53H6.68V10.76h3L10,7.05Z"/>
+											</svg>
+											<span class="social-media__text">Facebook</span>
+										</a>
+									</li>
+									<li class="social-media__button">
+										<a id="email-button-inline-alt" class="social-media__link" href="mailto:?subject=">
+
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 23.51 23.5">
+												<title>social_mail</title>
+												<path class="cls-2" d="M23.34.32,23.27.24,23.18.16A.72.72,0,0,0,22.55,0L.56,10.93l0,0a.71.71,0,0,0-.5.51.73.73,0,0,0,0,.38H0v0a.76.76,0,0,0,.1.21l.08.09.12.11.12.06.1.05,6.67,3.18,3.88,7.37a42.65,42.65,0,0,1,.11.22.77.77,0,0,0,.11.12l.09.08a.77.77,0,0,0,.21.1h0a.73.73,0,0,0,.38,0,.71.71,0,0,0,.5-.5l0,0L23.48,1A.72.72,0,0,0,23.34.32ZM2.43,11.65l16.4-8.14L7.62,14.13Zm9.39,9.5-3.15-6L20.22,4.22Z"/>
+											</svg>
+											<span class="social-media__text">Email</span>
+										</a>
+									</li>
+									<li class="social-media__button">
+										<a id="whatsapp-button-inline-alt" class="social-media__link" href="whatsapp://send?text=" data-action="share/whatsapp/share">
+
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 41.93 41.93">
+												<title>WhatsApp</title>
+												<path id="WhatsApp" class="cls-1" d="M41.93,20.43A20.62,20.62,0,0,1,11.4,38.31L0,41.93,3.72,31a20.21,20.21,0,0,1-3-10.55,20.59,20.59,0,0,1,41.17,0ZM21.35,3.25A17.26,17.26,0,0,0,4,20.43,17,17,0,0,0,7.34,30.5L5.18,36.87l6.65-2.11A17.32,17.32,0,0,0,38.66,20.43,17.26,17.26,0,0,0,21.35,3.25Zm10.4,21.88c-.13-.21-.46-.33-1-.58s-3-1.46-3.45-1.63-.8-.25-1.14.25-1.3,1.63-1.6,2-.59.38-1.09.13a13.81,13.81,0,0,1-4.06-2.48,15.1,15.1,0,0,1-2.81-3.47c-.29-.5,0-.77.22-1s.51-.58.76-.88a3.36,3.36,0,0,0,.5-.84.91.91,0,0,0,0-.88C18,15.45,16.94,13,16.52,12s-.84-.83-1.13-.83-.63,0-1,0a1.86,1.86,0,0,0-1.35.63,5.6,5.6,0,0,0-1.77,4.18,9.69,9.69,0,0,0,2.06,5.18c.25.33,3.49,5.55,8.62,7.56S27.12,30,28,29.89s3-1.21,3.41-2.38A4.17,4.17,0,0,0,31.74,25.13Z"/>
+											</svg>
+											<span class="social-media__text">WhatsApp</span>
+										</a>
+									</li>
+								</ul>
+								-->
+								<a class="gap__compare" id="local-visualization-link">
+									See how <span class="gap__country"></span>
+									compares to other countries
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section section__visualizations--global layout">
+					<div class="back">
+						<a id="global-visualization-back" class="back__link">
+							<img src="images/icons/back.svg" alt="Back" class="back__arrow">Back
+						</a>
+					</div>
+					<div class="section__body">
+						<div class="section--visualizations__wrapper section--form__wrapper section--form__wrapper--small-viewport">
+							<div class="global__local-wrapper">
+								<p class="global__local">
+									<span class="global__shareable">
+										In <span class="global__user-country"></span>
+										men make on average <span class="global__user-currency">$</span>
+										<span class="global__user-difference"></span>
+										more than women per month.
+									</span>
+									This is the <span class="global__rank"></span>
+									<span class="global__superlative">largest</span>
+									gap in Africa.
+								</p>
+								<ul class="global__social">
+									<li class="social-media__button">
+										<a id="twitter-button-inline" class="social-media__link" href="#0">
+											<!-- <img class="social-media__icon" alt="" src="images/icons/social-tw.svg"> -->
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 16.7 13.57">
+												<title>social_tw</title>
+												<path class="cls-1" d="M16.7,1.61a6.84,6.84,0,0,1-2,.54A3.44,3.44,0,0,0,16.24.25a6.83,6.83,0,0,1-2.17.83A3.43,3.43,0,0,0,8.23,4.21,9.73,9.73,0,0,1,1.16.63,3.43,3.43,0,0,0,2.22,5.2,3.41,3.41,0,0,1,.67,4.78a3.43,3.43,0,0,0,2.75,3.4,3.48,3.48,0,0,1-1.55.06,3.42,3.42,0,0,0,3.2,2.38A6.91,6.91,0,0,1,0,12a9.7,9.7,0,0,0,5.25,1.54A9.69,9.69,0,0,0,15,3.38,7,7,0,0,0,16.7,1.61Z"/>
+											</svg>
+											<span class="social-media__text">Twitter</span>
+										</a>
+									</li>
+									<li class="social-media__button">
+										<a id="facebook-button-inline" class="social-media__link" href="#0">
+											<!-- <img class="social-media__icon" alt="" src="images/icons/social-fb.svg"> -->
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 10.05 21.53">
+												<title>social_fb</title>
+												<path d="M6.68,7.05V5.2c0-1,.09-1.49,1.48-1.49H10V0h-3C3.48,0,2.23,1.8,2.23,4.83V7.05H0v3.71H2.23V21.53H6.68V10.76h3L10,7.05Z"/>
+											</svg>
+											<span class="social-media__text">Facebook</span>
+										</a>
+									</li>
+									<li class="social-media__button">
+										<a id="email-button-inline" class="social-media__link" href="mailto:?subject=">
+											<!-- <img class="social-media__icon" alt="" src="images/icons/social-mail.svg"> -->
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 23.51 23.5">
+												<title>social_mail</title>
+												<path class="cls-2" d="M23.34.32,23.27.24,23.18.16A.72.72,0,0,0,22.55,0L.56,10.93l0,0a.71.71,0,0,0-.5.51.73.73,0,0,0,0,.38H0v0a.76.76,0,0,0,.1.21l.08.09.12.11.12.06.1.05,6.67,3.18,3.88,7.37a42.65,42.65,0,0,1,.11.22.77.77,0,0,0,.11.12l.09.08a.77.77,0,0,0,.21.1h0a.73.73,0,0,0,.38,0,.71.71,0,0,0,.5-.5l0,0L23.48,1A.72.72,0,0,0,23.34.32ZM2.43,11.65l16.4-8.14L7.62,14.13Zm9.39,9.5-3.15-6L20.22,4.22Z"/>
+											</svg>
+											<span class="social-media__text">Email</span>
+										</a>
+									</li>
+									<li class="social-media__button">
+										<a id="whatsapp-button-inline" class="social-media__link" href="whatsapp://send?text=" data-action="share/whatsapp/share">
+											<!-- <img class="social-media__icon" alt="" src="images/icons/social-whatsapp.svg"> -->
+											<svg xmlns="http://www.w3.org/2000/svg" class="social-media__icon" viewBox="0 0 41.93 41.93">
+												<title>WhatsApp</title>
+												<path id="WhatsApp" class="cls-1" d="M41.93,20.43A20.62,20.62,0,0,1,11.4,38.31L0,41.93,3.72,31a20.21,20.21,0,0,1-3-10.55,20.59,20.59,0,0,1,41.17,0ZM21.35,3.25A17.26,17.26,0,0,0,4,20.43,17,17,0,0,0,7.34,30.5L5.18,36.87l6.65-2.11A17.32,17.32,0,0,0,38.66,20.43,17.26,17.26,0,0,0,21.35,3.25Zm10.4,21.88c-.13-.21-.46-.33-1-.58s-3-1.46-3.45-1.63-.8-.25-1.14.25-1.3,1.63-1.6,2-.59.38-1.09.13a13.81,13.81,0,0,1-4.06-2.48,15.1,15.1,0,0,1-2.81-3.47c-.29-.5,0-.77.22-1s.51-.58.76-.88a3.36,3.36,0,0,0,.5-.84.91.91,0,0,0,0-.88C18,15.45,16.94,13,16.52,12s-.84-.83-1.13-.83-.63,0-1,0a1.86,1.86,0,0,0-1.35.63,5.6,5.6,0,0,0-1.77,4.18,9.69,9.69,0,0,0,2.06,5.18c.25.33,3.49,5.55,8.62,7.56S27.12,30,28,29.89s3-1.21,3.41-2.38A4.17,4.17,0,0,0,31.74,25.13Z"/>
+											</svg>
+											<span class="social-media__text">WhatsApp</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="global__countries">
+								<div class="global__countries-header">
+									<span class="global__header global__header--country">Country</span>
+									<span class="global__header global__header--female">
+										Female<br>salary (avg)
+									</span>
+									<span class="global__header global__header--male">
+										Male<br>salary (avg)
+									</span>
+								</div>
+							</div>
+							<p class="global__citation">
+								<span>Source:</span>
+								<a href="https://www.weforum.org/reports/global-gender-gap-report-2021" target="_blank" title="World Economic Forum, 2021">World Economic Forum, 2021</a>
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<div class="info">
+					<div class="info__background"></div>
+					<div class="info__content">
+						<button class="button button--red button--icon-dark info__close">
+							Close 
+						</button>
+					</div>
+				</div>
+			</main>
+			<footer>
+				<div class="section__footer text-white">
+					<div class="container">
+						<div class="row small">
+							<div class="col-md-3 col-sm-6">
+								<div class="gap__info-wrapper">
+									<button class="button button--red button--icon-dark gap__info">
+										How does the tool work
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+
+			<section class="footer">
+				brought to you by <br />Babylon19 & Into Binary.
+			</section>
+		</section>
+		
+		<script defer="defer" src="scripts.min.js"></script>
+		<script defer="defer" src="jQuery.js"></script>
+		<script defer="defer" src="script-b19.js"></script>
+	</body>
+</html>

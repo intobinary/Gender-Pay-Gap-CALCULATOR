@@ -1,0 +1,120 @@
+---
+layout: blank
+---
+/* Orange: e74c3c */
+/* e95d4e ==> rgba(55, 8, 84, .9) */
+/* 921e12 ==> .7 */
+/* c0392b ==> .5 */
+/* Purple: 370854 */
+
+*, *::before, *::after {
+		-webkit-transition: .5s;
+		-box-transition: .5s;
+		-o-transition: .5s;
+	transition: .5s;
+}
+html, body {
+	/*
+	width: 100%; height: 100%;
+	*/
+}
+
+.about { position: relative; z-index: 10; }
+.nav { position: relative; z-index: 20; }
+
+html {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.about { background-color: #370854; }
+.nav-button,
+.nav.is-active .nav-button.is-active { background-color: #370854 !important; }
+.header,
+.footer { color: #370854; }
+.nav,
+.nav-button,
+.content { background-color: rgb(255, 255, 255); }
+.about,
+.nav-button { color: rgb(255, 255, 255); }
+.nav.is-active .nav-button.is-active { color: rgb(255, 255, 255) !important; }
+
+.nav.is-active .nav-button { color: black; }
+
+.nav.is-active .nav-button { background-color: transparent !important; }
+
+.header,
+.footer { text-align: right; }
+
+@font-face {
+	font-family: "Hobo Std";
+	src: url("/assets/fonts/Hobo-Std/HoboStd.otf.odft");
+	/*
+	src: url("/assets/fonts/ALPHABETH.eot") format("embedded-opentype"),
+			url("/assets/fonts/ALPHABETH.woff2") format("woff2"),
+			url("/assets/fonts/ALPHABETH.woff") format("woff"),
+			url("/assets/fonts/ALPHABETH.ttf") format("trutype"),
+			url("/assets/fonts/ALPHABETH.svg") format("svg");
+	*/
+}
+
+body {
+	font-family: "Hobo Std", serif;
+}
+{ font-family: "Impact", sans-serif; }
+
+.nav,
+.content {
+}
+.nav {
+	position: fixed; top: 0; left: 0;
+	width: 10%; height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.nav-button {
+	flex: 1;
+	margin: .5em 0;
+	text-align: center;
+	
+	writing-mode: vertical-lr;
+	text-orientation: mixed;
+}
+.nav-close {
+	position: absolute; left: 0;
+	width: 100%; height: 33.333%;
+	
+//	background-color: red;
+}
+
+.about {
+	position: absolute; top: 0; left: 10%;
+	width: 90%; min-height: 100vh;
+	padding: 1em;
+}
+.about h5 { font-size: 1.25em; }
+.about p { font-size: 1em; }
+.about a {
+	color: white;
+	text-decoration: underline;
+}
+
+.content {
+	position: relative; left: 10%;
+	width: 90%;
+	padding: 1em;
+}
+.header {
+}
+
+.nav-button,
+.nav-close { cursor: pointer; }
+
+.about { left: -100%; }
+.about.is-active { left: 10%; }
+
+.nav-close { top: -100%; }
+.nav-button:nth-child(1).is-active ~ .nav-close { top: 0; }
+.nav-button:nth-child(2).is-active ~ .nav-close { top: 33.333%; }
+.nav-button:nth-child(3).is-active ~ .nav-close { top: 66.666%; }
