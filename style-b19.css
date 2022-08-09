@@ -38,15 +38,16 @@ html {
 .nav.is-active .nav-button.is-active { background-color: #370854 !important; }
 .header,
 .footer { color: #370854; }
+html,
 .nav,
-.nav-button,
-.content { background-color: rgb(255, 255, 255); }
+.nav-button { background-color: #eee; }
 .about,
 .nav-button { color: rgb(255, 255, 255); }
 .nav.is-active .nav-button.is-active { color: rgb(255, 255, 255) !important; }
 
 .nav.is-active .nav-button { color: black; }
 
+body,
 .nav.is-active .nav-button { background-color: transparent !important; }
 
 .header,
@@ -68,6 +69,12 @@ body {
 	font-family: "Hobo Std", serif;
 }
 { font-family: "Impact", sans-serif; }
+
+html {
+	background-image: url("/g-app/assets/images/background.png");
+	background-position: center;
+	background-size: 75%;
+}
 
 .nav,
 .content {
