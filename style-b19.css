@@ -71,9 +71,11 @@ body {
 { font-family: "Impact", sans-serif; }
 
 html {
+	/*
 	background-image: url("/assets/images/background.png");
 	background-position: center;
 	background-size: 75%;
+	*/
 }
 
 .nav,
