@@ -22,7 +22,7 @@ html, body {
 html,
 .nav,
 .about {
-	height: 100%;
+	min-height: 100%;
 }
 
 .about { position: relative; z-index: 10; }
