@@ -71,7 +71,7 @@ body {
 { font-family: "Impact", sans-serif; }
 
 html {
-	background-image: url("/g-app/assets/images/background.png");
+	background-image: url("/assets/images/background.png");
 	background-position: center;
 	background-size: 75%;
 }
